@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font-family: 'Audiowide', cursive;
+      line-height: 1.8;
+      color: red;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: red;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: blue;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background: url(https://myanimelist.cdn-dena.com/s/common/uploaded_files/1444014275-106dee95104209bb9436d6df2b6d5145.jpeg);
+      background-size: 100% 100%;
+	  height: 700px;
+	  color: black;
+      padding: 100px 25px;
+      font-family: 'Coiny', cursive;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: blue;
+  }
+  .logo-small {
+      color: blue;
+      font-size: 50px;
+  }
+  .logo {
+      color: red;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: black;
+  }
+  .carousel-indicators li {
+      border-color: yellow;
+  }
+  .carousel-indicators li.active {
+      background-color: blue;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #f4511e; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: blue !important;
+      color: black;
+  }
+  .panel-heading {
+      color: pink !important;
+      background-color: blue !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: blue !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: red;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: blue;
+      color: red;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: blue;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: red !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: red !important;
+      background-color: blue !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: red !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: yellow;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">ANIMIE SHOP</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#ABOUT">ABOUT</a></li>
+        <li><a href="#NARUTO">NARUTO</a></li>
+        <li><a href="#BLEACH">BLEACH</a></li>
+        <li><a href="#ONEPIECE">ONE PIECE</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>ANIME SHOP </h1> 
+  <p>OTHER IDEAS COMING SOON</p> 
+  <form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">REQUEST DISCOUNT</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Container (About Section) -->
+<div id="ABOUT" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2></h2><br>
+      <h4>We care for all our costomers and we are trying to help out our school with school suppiles and help our afterschool clubs</h4><br>
+      <p>"Sometimes one can become lost in a big company and lose sight of how what one does truly helps or impacts the end customer. If you are one of those, think of a fire brigade, a line of people passing buckets of water from one to the other from a source of water to the site of the fire. An individual in the brigade may not be able to see the end result, i.e. the water being thrown on the fire to put it out, but the contribution of the individual is indispensable to the final outcome."
+
+BY:Grant Bright, Former Project Lead IBM</p>
+      <br><button class="btn btn-default btn-lg">LIKE</button>
+	  <script>$("button").on("click", function() { 
+	   alert("THANKS :)") });</script>
+    </div>
+    <div class="col-sm-4">
+      <span class="logo"><img src="https://vignette.wikia.nocookie.net/central/images/8/84/Naruto_logo.png/revision/latest?cb=20130926003151" width="300px"></span>
+    </div>
+  </div>
+</div>
+<div id="" class="container-fluid">
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="logo slideanim"></span>
+    </div>
+    
+
+
+<!-- Container (Portfolio Section) -->
+<div id="" class="container-fluid text-center bg-grey">
+  <h2>Portfolio</h2><br>
+  <h4>What we have created</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="http://digilander.libero.it/joe.chip/mandarake_shibuya_1.jpg" alt="Paris" width="400" height="300">
+        <p><strong>JAPAN</strong></p>
+        <p>we built in japan</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://s3-media2.fl.yelpcdn.com/bphoto/n99G_LkmJbok0oY01SdS5w/168s.jpg" alt="New York" width="400" height="300">
+        <p><strong>New York</strong></p>
+        <p>We built New York</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://s3-media1.fl.yelpcdn.com/bphoto/vk9n1DtW8Ajj-WLmv4cxXA/180s.jpg" alt="San Francisco" width="400" height="300">
+        <p><strong>San Francisco</strong></p>
+        <p>Yes, San Fran is ours</p>
+      </div>
+    </div>
+  </div><br>
+  
+  <h2>NARUTO</h2>
+  <div id="NARUTO" class="carousel slide text-center" data-ride="carousel">
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- 1st set -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Buy All Of Them For A Discount</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>'06 Naruto Anime Collector Tin</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>1</strong>Naruto Premium trading cards</p>
+          <p><strong></strong> Each collectible tin contains: 4 packs Naruto Ninja Ranks, 4 Packs Naruto Way of the Ninja, 1 Exclusive Naruto Anime motion card</p>
+          <p><strong></strong> These older collections are becoming rarer. Collect them all!</p>
+         
+        </div>
+        <div class="panel-footer">
+          <h3>$12.99</h3>
+          <h4>USE CODE TO GET DISCOUNT</h4>
+          <button class="btn btn-lg">Add To Cart</button>
+		  <script>$("button").on("click", function() { 
+		    alert("ADDED TO CART") });</script>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Naruto Shippuden WCF Ichiban Kuji Blind Box Figurine- 1 Figure</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong></strong> This set includes five different 2.8" characters with special high detail metallic finish versions of each as rare chase versions and an extra special version of Naruto Uzumaki with a limited Gamakichi sticker.</p>
+          <p><strong></strong>his first collection comes at an amazing value for all the detail and recognition that Banpresto's WCF figure line is known for. Characters include Naruto, Gaara, Sasuke, Kakashi, and Sakura</p>
+          <p><strong></strong> Minor assembly required. Base included.</p>
+          
+        </div>
+        <div class="panel-footer">
+          <h3>$6.25</h3>
+          <h4></h4>
+          <button class="btn btn-lg">ADD TO CART</button>
+		  <script>$("button").on("click", function() { 
+		    alert("ADDED TO CART") });</script>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Funko POP Naruto Keychain</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong></strong> From Naruto, Naruto, as a stylized Pocket POP Keychain from Funko!</p>
+          <p><strong></strong> Stylized collectable keychain stands 1 1/2 inches tall, perfect for any Naruto fan!</p>
+          <p><strong></strong> Take Naruto wherever you go!</p>
+      
+        </div>
+        <div class="panel-footer">
+          <h3>$6.99</h3>
+          <h4>USE CODE TO GET DISCOUNT</h4>
+          <button class="btn btn-lg">ADD TO CART</button>
+		  <script>$("button").on("click", function() { 
+		    alert("ADDED TO CART") });</script>
+        </div>
+      </div>      
+    </div>    
+  </div>
+      </div>
+	   <!-- 2nd SET -->
+      <div class="item">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Buy All Of Them For A Discount</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Naruto Characters Poster 24 x 36in</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong></strong> Approximately 24 by 36 Inches</p>
+          <p><strong></strong> Full Color</p>
+          <p><strong></strong> Great Wall Decor</p>
+          <p><strong></strong> Easy to Frame</p>
+          <p><strong></strong> Ships in a Sturdy Tube</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$7.99</h3>
+          <h4></h4>
+          <button class="btn btn-lg">Add To Cart</button>
+		  <script>$("button").on("click", function() { 
+		    alert("ADDED TO CART") });</script>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Naruto Shippuden Uncut Set 34</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>1</strong>DVD</p>
+          <p><strong></strong> </p>
+          <p><strong></strong> </p>
+          <p><strong></strong> </p>
+          <p><strong></strong> </p>
+        </div>
+        <div class="panel-footer">
+          <h3>$29</h3>
+          <h4></h4>
+          <button class="btn btn-lg">ADD TO CART</button>
+		  <script>$("button").on("click", function() { 
+		    alert("ADDED TO CART") });</script>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Touirch Anime Naruto Leaf Uchiha Itachi Cosplay Headband Ring Necklace Set</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong></strong> Anime Naruto Leaf Uchiha Itachi Cosplay Headband Ring Necklace Set</p>
+          <p><strong></strong> Material: metal</p>
+          <p><strong></strong> Length:80cm*(approx)</p>
+          <p><strong></strong> About Stlye We Will Random Shipped</p>
+        
+        </div>
+        <div class="panel-footer">
+          <h3>$13.99</h3>
+          <h4></h4>
+          <button class="btn btn-lg">ADD TO CART</button>
+		  <script>$("button").on("click", function() { 
+		    alert("ADDED TO CART") });</script>
+        </div>
+      </div>      
+    </div>    
+  </div>
+      </div>
+
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+  <h2>BLEACH</h2>
+  <div id="BLEACH" class="carousel slide text-center" data-ride="carousel">
+  <div id="myCarousel2" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel2" data-slide-to="1"></li>
+      <li data-target="#myCarousel2" data-slide-to="2"></li>
+    </ol>
+
+    <!-- 1st set -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Buy All Of Them For A Discount</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Bleach Shinigami Playing Cards</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong></strong> Licensed product</p>
+          <p><strong></strong> Cool looking décor</p>
+          <p><strong></strong> Decorate your bedroom, playroom, office or any room with this great accessory!</p>
+          
+        </div>
+        <div class="panel-footer">
+          <h3>$6.50</h3>
+          <h4>Buy 3 for a discount</h4>
+          <button class="btn btn-lg">Add To Cart</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Bleach Officially Licensed Kisuke Urahara Samurai Sword Handle Anime Umbrella</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong></strong> Official Licensed Product</p>
+          <p><strong></strong> Realistic Samurai Sword Handle</p>
+          <p><strong></strong> Automatic Push Button Open</p>
+          <p><strong></strong> 44" wide span when Opened</p>
+         
+        </div>
+        <div class="panel-footer">
+          <h3>$34.99</h3>
+          <h4></h4>
+          <button class="btn btn-lg">ADD TO CART</button>
+		  <script>$("button").on("click", function() { 
+		    alert("ADDED TO CART") });</script>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Anime Bleach Kurosaki Ichigo Customizable Personalization Home Outdoor Bike Mug Aluminum Alloy 400ml Stainless Steel Sports Water Bottle</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong></strong> Dimensions: 2.5" x 7".Capacity: 400ml.</p>
+          <p><strong></strong> High gloss finish. Made of aluminum;</p>
+          <p><strong></strong> Easy-grip handle with thumb rest</p>
+          <p><strong></strong> Color:As seen in the picture</p>
+          <p><strong></strong> High quality Stainless Steel Sports Bottle.</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$14.66</h3>
+          <h4></h4>
+          <button class="btn btn-lg">ADD TO CART</button>
+		  <script>$("button").on("click", function() { 
+		    alert("ADDED TO CART") });</script>
+        </div>
+      </div>      
+    </div>    
+  </div>
+      </div>
+	   <!-- 2nd SET -->
+      <div class="item">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Buy All Of Them For A Discount</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Funko POP Anime: Bleach Ichigo Action Figure</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>1</strong> From the hit anime Bleach, Ichigo, as a stylized POP vinyl from Funko!</p>
+          <p><strong>1</strong> Stylized collectable stands 3 3/4 inches tall, perfect for any Bleach fan!</p>
+          <p><strong>1</strong> Collect and display all Bleach and anime Pop! Vinyls!</p>
+          
+        </div>
+        <div class="panel-footer">
+          <h3>$9.00</h3>
+          <h4>Buy 3 for a discount</h4>
+          <button class="btn btn-lg">Add To Cart</button>
+		  <script>$("button").on("click", function() { 
+		    alert("ADDED TO CART") });</script>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>BLEACH KUROSAKI ICHIGO GIANT WALL ART POSTER B569</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong></strong> THE SIZE OF THIS POSTER IS: 118.8 x 84cm / 46.8 x 33 inch</p>
+          <p><strong></strong> HIGH QUALITY FINE DETAIL REPRODUCTION PRINT</p>
+          <p><strong></strong> PRINTED ONTO 250 GMS MATT PAPER</p>
+          <p><strong></strong> SAME DAY OR NEXT WORKING DAY DISPATCH</p>
+          <p><strong></strong> DELIVERY TIME TO UNITED STATES 7-14 DAYS</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$19.99</h3>
+          <h4></h4>
+          <button class="btn btn-lg">ADD TO CART</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Premium</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>1</strong>  BLEACH DVD</p>
+         
+        </div>
+        <div class="panel-footer">
+          <h3>$49</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+		  <script>$("button").on("click", function() { 
+		    alert("THANKS FOR SIGNING UP") });</script>
+        </div>
+      </div>      
+    </div>    
+  </div>
+      </div>
+
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+  <h2>ONE PIECE</h2>
+  <div id="ONEPIECE" class="carousel slide text-center" data-ride="carousel">
+  <div id="myCarousel3" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel3" data-slide-to="1"></li>
+      <li data-target="#myCarousel3" data-slide-to="2"></li>
+    </ol>
+
+    <!-- 1st set -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Buy All Of Them For A Discount</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>SASUKE</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>1</strong> Sticker</p>
+          <p><strong>1</strong> Headban</p>
+          <p><strong>1</strong> Kit</p>
+          <p><strong>2</strong> Sasuke Figure</p>
+          <p><strong>No</strong> ADs</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$90</h3>
+          <h4>Buy 3 for a discount</h4>
+          <button class="btn btn-lg">Add To Cart</button>
+		  <script>$("button").on("click", function() { 
+		    alert("ADDED TO CART") });</script>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>ONE PIECE</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>5</strong> BED</p>
+          <p><strong>1</strong> FRIGE</p>
+          <p><strong>1</strong> MAC</p>
+          <p><strong>1</strong> chair</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$29</h3>
+          <h4></h4>
+          <button class="btn btn-lg">ADD TO CART</button>
+		  <script>$("button").on("click", function() { 
+		    alert("ADDED TO CART") });</script>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>MAC??</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>1</strong> MAC WITH INTERNET</p>
+     
+        </div>
+        <div class="panel-footer">
+          <h3>500</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+		  <script>$("button").on("click", function() { 
+		    alert("THANKS") });</script>
+        </div>
+      </div>      
+    </div>    
+  </div>
+      </div>
+	   <!-- 2nd SET -->
+      <div class="item">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Buy All Of Them For A Discount</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>SASUKE</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>1</strong> Sticker</p>
+          <p><strong>1</strong> Headban</p>
+          <p><strong>1</strong> Kit</p>
+          <p><strong>2</strong> Sasuke Figure</p>
+          <p><strong>No</strong> ADs</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$90</h3>
+          <h4>Buy 3 for a discount</h4>
+          <button class="btn btn-lg">Add To Cart</button>
+		  <script>$("button").on("click", function() { 
+		    alert("ADDED TO CART") });</script>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Pro</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>2</strong> UMBRELLA</p>
+        
+        
+        </div>
+        <div class="panel-footer">
+          <h3>$29</h3>
+          <h4></h4>
+          <button class="btn btn-lg">ADD TO CART</button>
+		  <script>$("button").on("click", function() { 
+		    alert("ADDED TO CART") });</script>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Premium</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong></strong> VIP FOR ONE PIECE</p>
+        
+        </div>
+        <div class="panel-footer">
+          <h3>$49</h3>
+          <h4>EACH MONTH</h4>
+          <button class="btn btn-lg">Sign Up</button>
+		  <script>$("button").on("click", function() { 
+		    alert("THANKS") });</script>
+        </div>
+      </div>      
+    </div>    
+  </div>
+      </div>
+	  
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel3" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel3" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> New York, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span> 917-770-8127</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> jonathanguallpa@jamaicagateway.net</p> 
+    </div>
+    <div class="col-sm-7">
+		<form action="http://www.SnapHost.com/captcha/send.aspx" id="ContactUsCaptchaWebForm" method="post" onsubmit="return ValidateForm(this);" target="_top">
+		<input name="skip_WhereToSend" type="hidden" value="your@email.com" />
+		<input name="skip_SnapHostID" type="hidden" value="UCZ7UHT9XJCQ" />
+		<input name="skip_WhereToReturn" type="hidden" value="http://www.YourWebsiteAddress.com/ThankYouPage.htm" />
+		<input name="skip_Subject" type="hidden" value="Contact Us Form" />
+		<input name="skip_ShowUsersIp" type="hidden" value="1" />
+		<input name="skip_SendCopyToUser" type="hidden" value="1" />
+		<script type="text/javascript">
+		function ValidateForm(frm) {
+		if (frm.Name.value == "") {alert('Name is required.');frm.Name.focus();return false;}
+		if (frm.FromEmailAddress.value == "") {alert('Email address is required.');frm.FromEmailAddress.focus();return false;}
+		if (frm.FromEmailAddress.value.indexOf("@") < 1 || frm.FromEmailAddress.value.indexOf(".") < 1) {alert('Please enter a valid email address.');frm.FromEmailAddress.focus();return false;}
+		if (frm.Comments.value == "") {alert('Please enter comments or questions.');frm.Comments.focus();return false;}
+		if (frm.skip_CaptchaCode.value == "") {alert('Enter web form code.');frm.skip_CaptchaCode.focus();return false;}
+		return true; }
+		function ReloadCaptchaImage(captchaImageId) {
+		var obj = document.getElementById(captchaImageId);
+		var src = '' + obj.src;
+		obj.src = '';
+		var date = new Date();
+		var pos = src.indexOf('&rad=');
+		if (pos >= 0) { src = src.substr(0, pos); }
+		obj.src = src + '&rad=' + date.getTime();
+		return false; }
+		</script>
+		<table border="0" cellpadding="5" cellspacing="0" width="600">
+		<tr>
+		<td><b>Name*:</b></td>
+		<td><input name="Name" type="text" maxlength="60" style="width:350px;" /></td>
+		</tr><tr>
+		<td><b>Phone number:</b></td>
+		<td><input name="PhoneNumber" type="text" maxlength="43" style="width:350px;" /></td>
+		</tr><tr>
+		<td><b>Email address*:</b></td>
+		<td><input name="FromEmailAddress" type="text" maxlength="60" style="width:350px;" /></td>
+		</tr><tr>
+		<td><b>Comments and questions*:</b></td>
+		<td><textarea name="Comments" rows="7" cols="40" style="width:350px;"></textarea></td>
+		</tr><tr>
+		<td colspan="2" align="center"> <br />
+		<table border="0" cellpadding="0" cellspacing="0">
+		<tr><td colspan="2" style="padding-bottom:18px;">
+		<!-- Please check our ProCaptcha service which is ad-free:
+		http://www.SnapHost.com/captcha/ProCaptchaOverview.aspx -->
+		<a href="http://www.snaphost.com/captcha" alt="form to email code" title="form to email code">
+		form to email code</a></td></tr>
+		<tr valign="top"><td> <i>Enter web form code*:</i>
+		<input name="skip_CaptchaCode" type="text" style="width:80px;" maxlength="6" />
+		</td><td>
+		<a href="http://www.snaphost.com/captcha/ReadyForms/ContactUsForm.aspx"><img id="CaptchaImage" alt="Contact Us form" title="HTML code for Contact Us form"
+		style="margin-left:20px;"
+		src="http://www.SnapHost.com/captcha/CaptchaImage.aspx?id=UCZ7UHT9XJCQ&ImgType=2" /></a><br />
+		<a href="#" onclick="return ReloadCaptchaImage('CaptchaImage');"><span style="font-size:12px;">reload image</span></a> </td></tr>
+		</table> <br />
+		* - required fields. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		<input name="skip_Submit" type="submit" value="Submit" />
+		</td></tr>
+		</table><br />
+		</form>
+
+
+    </div>
+  </div>
+</div>
+
+   
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Add Google Maps -->
+<!-- Add Google Maps -->
+<div id="googleMap" style="height:400px;width:100%;"></div>
+<script>
+function myMap() {
+var myCenter = new google.maps.LatLng(40.714183, -73.797859);
+var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var marker = new google.maps.Marker({position:myCenter});
+marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAFkyCXpO23o-swZEJ4dH5AZlaV_xekIQ&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
